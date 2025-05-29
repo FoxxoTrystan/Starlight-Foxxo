@@ -1,9 +1,11 @@
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 using System.Net;
 using System.Numerics;
 using Content.Shared.ActionBlocker;
+using Content.Shared.Actions;
 using Content.Shared.Bed.Sleep;
 using Content.Shared.CCVar;
+using Content.Shared.Charges.Systems;
 using Content.Shared.Friction;
 using Content.Shared.Gravity;
 using Content.Shared.Inventory;
@@ -49,6 +51,8 @@ public abstract partial class SharedMoverController : VirtualController
     [Dependency] private   readonly SharedGravitySystem _gravity = default!;
     [Dependency] private   readonly SharedTransformSystem _transform = default!;
     [Dependency] private   readonly TagSystem _tags = default!;
+    [Dependency] private   readonly SharedActionsSystem _action = default!; //🌟Starlight🌟
+    [Dependency] private   readonly SharedChargesSystem _charges = default!; //🌟Starlight🌟
 
     protected EntityQuery<CanMoveInAirComponent> CanMoveInAirQuery;
     protected EntityQuery<FootstepModifierComponent> FootstepModifierQuery;

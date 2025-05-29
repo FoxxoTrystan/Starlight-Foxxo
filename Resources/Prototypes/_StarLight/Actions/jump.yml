@@ -1,0 +1,96 @@
+- type: entity
+  id: Jump
+  name: Jump
+  description: You jumps at the selected direction.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ActivationOnJump
+  - type: WorldTargetAction
+    useDelay: 30
+    icon:
+      sprite: _Starlight/Actions/resomi.rsi
+      state: jump
+    itemIconStyle: NoItem
+    checkCanAccess: false
+    range: 200
+    event: !type:JumpActionEvent
+      sound:
+        path: /Audio/_Starlight/Effects/Jump/resomi.ogg
+
+- type: entity
+  parent: Jump
+  id: JumpResomi
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: WorldTargetAction
+    useDelay: 30
+    icon:
+      sprite: _Starlight/Actions/resomi.rsi
+      state: jump
+    itemIconStyle: NoItem
+    checkCanAccess: false
+    range: 200
+    event: !type:JumpActionEvent
+      distance: 10
+      sound:
+        path: /Audio/_Starlight/Effects/Jump/resomi.ogg
+
+- type: entity
+  parent: Jump
+  id: JumpMoth
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: LimitedCharges
+    maxCharges: 3
+  - type: AutoRecharge
+    rechargeDuration: 30
+  - type: WorldTargetAction
+    useDelay: 1
+    icon:
+      sprite: _Starlight/Actions/resomi.rsi
+      state: jump
+    itemIconStyle: NoItem
+    checkCanAccess: false
+    range: 200
+    event: !type:JumpActionEvent
+      distance: 4.5
+      speed: 4.5 # Equal to movement speed.
+      sound:
+        path: /Audio/_Starlight/Effects/Jump/moth.ogg
+
+- type: entity
+  parent: Jump
+  id: JumpCat
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: WorldTargetAction
+    useDelay: 15
+    icon:
+      sprite: _Starlight/Actions/resomi.rsi
+      state: jump
+    itemIconStyle: NoItem
+    checkCanAccess: false
+    range: 200
+    event: !type:JumpActionEvent
+      distance: 2
+      #sound: The Silent Hunter.
+
+- type: entity
+  parent: Jump
+  id: JumpJet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: WorldTargetAction
+    useDelay: 3
+    icon:
+      sprite: _Starlight/Actions/resomi.rsi
+      state: jump
+    itemIconStyle: BigAction
+    checkCanAccess: false
+    range: 200
+    event: !type:JetJumpActionEvent
+      distance: 10
+      fromGrid: false
+      toPointer: false
+      sound:
+        path: /Audio/_Starlight/Effects/Jump/jetpack.ogg

@@ -1,4 +1,4 @@
-using Content.Server.Cargo.Systems;
+﻿using Content.Server.Cargo.Systems;
 using Content.Server.Explosion.EntitySystems;
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Components;
@@ -125,6 +125,12 @@ namespace Content.Server.Atmos.EntitySystems
         {
             var gas = gasTank.Comp.Air?.Remove(amount);
             CheckStatus(gasTank);
+
+            // 🌟Starlight🌟 start
+            gasTank.Comp.TotalMoles = gasTank.Comp.Air?.TotalMoles ?? 0;
+            DirtyField(gasTank.Owner, gasTank.Comp, nameof(GasTankComponent.TotalMoles));
+            // 🌟Starlight🌟 end
+
             return gas;
         }
 
@@ -150,6 +156,11 @@ namespace Content.Server.Atmos.EntitySystems
         {
             _atmosphereSystem.Merge(ent.Comp.Air, giver);
             CheckStatus(ent);
+
+            // 🌟Starlight🌟 start
+            ent.Comp.TotalMoles = ent.Comp.Air?.TotalMoles ?? 0;
+            DirtyField(ent.Owner, ent.Comp, nameof(GasTankComponent.TotalMoles));
+            // 🌟Starlight🌟 end
         }
 
         public void CheckStatus(Entity<GasTankComponent> ent)
