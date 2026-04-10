@@ -257,8 +257,8 @@
     - type: GhostTakeoverAvailable
 
 - type: entity
-  id: PlayerBorgChassisTSFBattery
-  parent: BorgChassisTSF
+  id: PlayerBorgChassisTSFAssaultBattery
+  parent: BorgChassisTSFAssault
   suffix: Battery, Module
   components:
   - type: ContainerFill
@@ -281,8 +281,8 @@
           - MechReactor
 
 - type: entity
-  parent: PlayerBorgChassisTSFBattery
-  id: PlayerBorgChassisTSFGhostRole
+  parent: PlayerBorgChassisTSFAssaultBattery
+  id: PlayerBorgChassisTSFAssaultGhostRole
   suffix: Ghost role
   components:
   - type: GhostRole
