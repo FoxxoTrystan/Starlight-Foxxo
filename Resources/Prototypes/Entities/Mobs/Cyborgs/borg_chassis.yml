@@ -392,9 +392,11 @@
   - type: ShowHealthBars
     damageContainers:
     - Biological
+    - Shadekin #SL
   - type: ShowHealthIcons
     damageContainers:
     - Biological
+    - Shadekin #SL
 # Starlight Start
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter

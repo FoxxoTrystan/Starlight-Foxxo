@@ -1,7 +1,14 @@
 - type: entity
   save: false
   name: Urist McShadow
-  parent: [MobBloodstream, MobAtmosStandard, MobFlammable, BaseMobSpecies, BaseSpeciesPickupableHuge]
+  parent:
+    [
+      MobBloodstream,
+      MobAtmosStandard,
+      MobFlammable,
+      BaseMobSpecies,
+      BaseSpeciesPickupableHuge,
+    ]
   id: BaseMobShadekin
   abstract: true
   components:
@@ -51,8 +58,17 @@
     - type: FlashModifier
       modifier: 2
     - type: Damageable
-      damageContainer: Biological
+      damageContainer: Shadekin
       damageModifierSet: Shadekin
+    - type: Deathgasp
+      damageType: Heat
+    - type: DamageVisuals
+      damageOverlayGroups:
+        Brute:
+          sprite: Mobs/Effects/brute_damage.rsi
+          color: "#1c1624"
+        Burn:
+          sprite: Mobs/Effects/burn_damage.rsi
     - type: Reactive
       groups:
         Flammable: [Touch]
@@ -122,7 +138,6 @@
       damage:
         types:
           Blunt: 0.85 #per second, scales with pressure and other constants.
-          Heat: 0.1
     - type: Fingerprint
     - type: Blindable
     - type: DarkenedVision
@@ -154,7 +169,7 @@
       thermalRegulationTemperatureThreshold: 2
     - type: Perishable
     - type: Butcherable
-      butcheringType: Spike # TODO human.
+      butcheringType: Spike
       spawned:
         - id: FoodMeat
           amount: 5

@@ -21,7 +21,6 @@
 - type: damageModifierSet
   id: Shadekin
   coefficients:
-    Asphyxiation: 0
     Cold: 0.75
     Heat: 1.2
     Cellular: 0.25

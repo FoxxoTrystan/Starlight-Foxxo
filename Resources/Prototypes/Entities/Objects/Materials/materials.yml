@@ -99,6 +99,7 @@
   - type: Healing
     damageContainers:
       - Biological
+      - Shadekin #SL
     damage:
       types:
         Slash: -0.5

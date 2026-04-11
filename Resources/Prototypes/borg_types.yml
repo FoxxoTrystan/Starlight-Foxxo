@@ -184,9 +184,11 @@
   - type: ShowHealthBars
     damageContainers:
     - Biological
+    - Shadekin #SL
   - type: ShowHealthIcons
     damageContainers:
     - Biological
+    - Shadekin #SL
 
   # Visual
   inventoryTemplateId: borgDutch

@@ -14,9 +14,11 @@
     - type: ShowHealthBars
       damageContainers:
         - Biological
+        - Shadekin #SL
     - type: ShowHealthIcons
       damageContainers:
         - Biological
+        - Shadekin #SL
     - type: Tag
       tags:
         - HudMedical
@@ -183,9 +185,11 @@
     - type: ShowHealthBars
       damageContainers:
         - Biological
+        - Shadekin #SL
     - type: ShowHealthIcons
       damageContainers:
         - Biological
+        - Shadekin #SL
     - type: Tag
       tags:
         - HudMedical

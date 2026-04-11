@@ -194,6 +194,7 @@
     - Biological
     - Inorganic
     - IPC # SL
+    - Shadekin #SL
   - type: ShowSyndicateIcons
 
 - type: entity
@@ -211,6 +212,7 @@
     - Biological
     - Inorganic
     - IPC # SL
+    - Shadekin #SL
   - type: ShowHungerIcons
   - type: ShowThirstIcons
   - type: ShowSyndicateIcons
