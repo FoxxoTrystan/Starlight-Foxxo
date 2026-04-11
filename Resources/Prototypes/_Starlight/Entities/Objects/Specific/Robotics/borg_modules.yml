@@ -138,37 +138,10 @@
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: security-unlethal-module }
 
-# region TSF
-- type: entity
-  id: BaseBorgModuleTSF
-  parent: BaseBorgModule
-  abstract: true
-  components:
-  - type: Tag
-    tags:
-    - BorgModuleTSF
-  - type: Item
-    inhandVisuals:
-      left:
-      - state: base-icon-inhand-left
-        color: "#22a7ff"
-      - state: base-module-inhand-left
-        color: "#444444"
-      - state: base-part-inhand-left
-      - state: base-stripes-inhand-left
-        color: "#5b5b5b"
-      right:
-      - state: base-icon-inhand-right
-        color: "#22a7ff"
-      - state: base-module-inhand-right
-        color: "#444444"
-      - state: base-part-inhand-right
-      - state: base-stripes-inhand-right
-        color: "#5b5b5b"
-
+# TSF
 - type: entity
   id: BorgModuleTSF
-  parent: [ BaseBorgModuleTSF, BaseProviderBorgModule ]
+  parent: [ BaseBorgModuleSecurity, BaseProviderBorgModule ]
   name: TSF Security cyborg module
   description: A Security TSF cyborg module which allows the unit to use unlethal equipment.
   components:
@@ -205,7 +178,7 @@
 
 - type: entity
   id: BorgModuleTSFCombat
-  parent: [ BaseBorgModuleTSF, BaseProviderBorgModule ]
+  parent: [ BaseBorgModuleSecurity, BaseProviderBorgModule ]
   name: TSMC Combat cyborg module
   description: A TSMC cyborg module which allows the unit to use combat equipment.
   components:
